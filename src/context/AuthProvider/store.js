@@ -1,9 +1,11 @@
 // src/context/AuthProvider/store.js
 import { configureStore } from "@reduxjs/toolkit";
-import reducers from "./reducers";
+import authReducer from "./reducers";
 
 const store = configureStore({
-  reducer: reducers,  // Reducer doğru bağlanmalı
+  reducer: {
+    auth: authReducer,
+  },
 });
 
 export default store;
